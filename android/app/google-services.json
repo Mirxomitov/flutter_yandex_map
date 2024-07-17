@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "141677905825",
+    "project_id": "flutter-yandex-map",
+    "storage_bucket": "flutter-yandex-map.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141677905825:android:ba9731c46616974f93ede0",
+        "android_client_info": {
+          "package_name": "uz.gita.flutter_yandex_map"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv0yr3AQDu8_psUicNPQmzdJCP1nbyXaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

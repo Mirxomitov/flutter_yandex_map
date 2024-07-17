@@ -1,0 +1,33 @@
+allprojects {
+    ext.kotlin_version = '1.9.20' // <= expected version is 1.5.1
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+/*dependencies {
+    implementation 'com.google.guava:guava:28.2-android'
+}*/
+
+/*buildscript {
+    ext.kotlin_version = '1.7.1' // <= expected version is 1.5.1
+}*/
+
+// I put this block in both build.gradle and android/build.gradle... no clue what it does though...
+configurations.all {
+    resolutionStrategy {
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22'
+    }
+}
